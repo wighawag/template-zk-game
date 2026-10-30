@@ -54,3 +54,12 @@ NFT avatars as identity; simultaneous-reveal variants; 3-4 player modes; mobile 
 - A shot reveals the shooter's room, so the shoot table is public map data; the shooter's forced move re-hides them.
 - A trap is the setter's own secret and is revealed on detonation, so it is the same pattern as a shot: no comparison of two players' secrets is ever needed.
 - An answer may carry a state transition (a forced move into another room), and can keep it hidden.
+
+## duel-in-the-dark game decisions (2026-10-30)
+
+The rules themselves are not written down here: the game follows the card game, referred to as inspiration. Only what this re-theme and its digital form had to DECIDE is recorded.
+
+- **Theme**: alien versus humans on a ship; both sides play by the same rules for now (the card game is symmetric).
+- **Rooms**, with the old ship SVG's numbering, which is already the card game's room graph: 1 Cryo Bay, 2 Bridge, 3 Science Lab, 4 Observation Gantry (upper deck); 5 Galley, 6 Mess Hall, 7 Cargo Hold, 8 Engine Room (lower deck). Effects: Coolant Purge (Cryo Bay), Maintenance Chute (Science Lab), Drop Down (Gantry), Stim Rations (Galley), Motion Tracker (Cargo Hold), Remote Charge (Engine Room).
+- **Remote Charge does NOT count toward the two-trap limit.**
+- **Maintenance Chute is applied as the card says and nothing more**: the forced move is silent, and only a resulting hit (Engine Room purged) is public.
