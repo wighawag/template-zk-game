@@ -66,3 +66,9 @@ The rules themselves are not written down here: the game follows the card game, 
 - **Rooms**, with the old ship SVG's numbering, which is already the card game's room graph: 1 Cryo Bay, 2 Bridge, 3 Science Lab, 4 Observation Gantry (upper deck); 5 Galley, 6 Mess Hall, 7 Cargo Hold, 8 Engine Room (lower deck). Effects: Coolant Purge (Cryo Bay), Maintenance Chute (Science Lab), Drop Down (Gantry), Stim Rations (Galley), Motion Tracker (Cargo Hold), Remote Charge (Engine Room).
 - **Remote Charge does NOT count toward the two-trap limit.**
 - **Maintenance Chute is applied as the card says and nothing more**: the forced move is silent, and only a resulting hit (Engine Room purged) is public.
+
+## Decision: the circuit is the rules; a state channel comes later (2026-10-30)
+
+Off-chain play is the answer to ~4M gas per proven action: players exchange co-signed states, each checking the other's proofs locally, and the chain only opens, closes, and adjudicates disputes by continuing the match on chain from the latest co-signed state under ZKMatches' rules.
+
+Decided now, because it shapes circuits: **duel-in-the-dark's circuits are designed as whole-state transitions** (public state in, public state out, the action's effect proven), so that a game's rules live once, in Noir, and a dispute is generic: a proof plus signatures. Milestone C is still built on chain as planned; the channel layer (messaging between browsers, co-signed states, dispute entry, griefing bond) is its own milestone after it.
