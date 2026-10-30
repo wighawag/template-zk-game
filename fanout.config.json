@@ -1,0 +1,9 @@
+{
+  "stem": "github:wighawag/jolly-roger",
+  "branches": {
+    "main": {
+      "stemBranch": "integration"
+    }
+  },
+  "verify": "pnpm install && pnpm --filter ./web check && pnpm --filter ./web run test:unit && pnpm --filter ./circuits test && pnpm --filter ./contracts test"
+}
