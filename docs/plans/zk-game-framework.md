@@ -27,7 +27,10 @@ The original duel-in-the-dark (2023) used circom + snarkjs PLONK, one global 2-p
 
 Devshell pinning nargo; circuits workspace; prover over noir_js + bb.js in node and browser; generator emitting committed artifacts and verifiers (ADR-0002); deploy script; tests at every layer (Noir, prover, on-chain, browser, embedded chain); `/zk` demo. See README.zk-game.md.
 
-### B. Match framework (template)
+### B. Match framework (template): DONE except as noted (2026-10-30)
+
+Contracts (ZKMatches + HideAndSeek, ADR-0003), two more circuits, the shared client module, and the /hide-and-seek page. Not done: the simultaneous-turn stub game (deferred, see ADR-0003), an end-to-end browser test of the SENDING side (it mirrors routes/demo), and the precache decision (finding).
+
 
 - Matches keyed by id: create with stake and an initial commitment, join, payout, abandonment by timeout.
 - Private state as a commitment chain: every action proves old commitment -> new commitment.
