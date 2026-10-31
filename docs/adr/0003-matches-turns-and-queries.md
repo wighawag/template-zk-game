@@ -11,7 +11,7 @@ created: 2026-10-30
 
 - **Matches, not a world.** Many concurrent matches keyed by id, each created with a stake and joined by matching it. This is the deliberate difference from template-commit-reveal, whose contracts are one shared world per deployment.
 - **A commitment per seat** for that player's hidden state, replaced only after a proven transition from the previous one. The chain of commitments is the player's history without revealing it.
-- **Alternating turns in action points**, passed by `_settle` once the turn holder has none left and nothing is pending, or by `endTurn`.
+- **Alternating turns in action points**, passed by `_settle` once the turn holder has none left and nothing is pending, or by `endTurn`. A game may hold the turn open with `_turnMayEnd` while it owes an action that is neither paid in points nor a query (added 2026-10-31 for duel-in-the-dark's forced move after a shot; the Remote Charge going off at the start of a turn is the next user).
 - **Queries**: an action that needs other seats to answer with a proof before the turn continues (a guess here; a shot, a detonation or a listen in duel-in-the-dark). The waited-for seats are a bitmask, so a query to several responders is already expressible.
 - **Deadlines on every wait**, and `claimTimeout`, callable by anyone: whoever was being waited for loses (the responder if a query is open, else the turn holder). Without this, a losing player could simply stop, and the stake would mean nothing.
 - **Payout by pull**: winnings and refunds are credited, and only the player itself can withdraw, never a delegate.
